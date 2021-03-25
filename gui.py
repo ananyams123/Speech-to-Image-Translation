@@ -67,3 +67,17 @@ def s2t():
     text = r.recognize_google(audio)
     print(text)
     message_display(text)
+
+    def main():
+    while True:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                quit()
+        button("Speak!", 150, 450, 100, 50, green, bright_green, s2t)
+        button("Quit", 550, 450, 100, 50, red, bright_red, close)
+        pygame.display.update()
+
+
+if __name__ == '__main__':
+    main()
